@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -r should -w lib/**/*.spec.js"
+    "test": "mocha -r should -w lib/**/*.spec.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "CC Inc.",
   "license": "private",
   "dependencies": {
     "mocha": "^3.5.3",
     "should": "^13.1.0",
-    "sinon": "^4.0.0"
-  }
+    "sinon": "^4.0.0",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
